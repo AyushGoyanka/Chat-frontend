@@ -38,10 +38,8 @@ e.preventDefault();
 
 
 try {
-  const url =
-    mode === "login"
-      ? "https://chat-backend-1-zh6a.onrender.com/login"
-      : "https://chat-backend-1-zh6a.onrender.com/register";
+  const API_BASE = "https://chat-backend-1-zh6a.onrender.com/api/auth";
+  const url = mode === "login" ? `${API_BASE}/login` : `${API_BASE}/register`;
 
   const res = await axios.post(url, {
     username,
