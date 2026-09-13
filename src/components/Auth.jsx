@@ -40,8 +40,8 @@ e.preventDefault();
 try {
   const url =
     mode === "login"
-      ? "http://localhost:4600/api/auth/login"
-      : "http://localhost:4600/api/auth/register";
+      ? "https://chat-backend-1-zh6a.onrender.com/login"
+      : "https://chat-backend-1-zh6a.onrender.com/register";
 
   const res = await axios.post(url, {
     username,
